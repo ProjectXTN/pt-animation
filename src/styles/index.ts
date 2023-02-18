@@ -1,8 +1,9 @@
 import styled from 'styled-components';
 import { motion } from 'framer-motion';
 
-import img from '../image/pedroLi.jpg'
-import secondImg from '../image/webtech.jpg'
+import img from '../image/pedroLi.jpg';
+import secondImg from '../image/img-paralax-3.png';
+import tech from '../image/technology2.gif'
 
 export const Main = styled.main`
     .first {
@@ -19,7 +20,27 @@ export const Main = styled.main`
                 width: 50%;
                 bottom: 50%;
                 text-align: center;
+                display: flex;
+                justify-content: center;
             }
+  
+
+        .typeText {
+            width: 70%;
+
+            h1 {
+                font-size: 60px;
+            }
+
+            h3 {
+                font-size: 20px;
+                font-weight: 500;
+            }
+
+            p {
+                font-size: 22px;
+            }
+        }
 
         .a {
             background-color: #f5f1ea;
@@ -47,28 +68,36 @@ export const Main = styled.main`
         }
 
         .b {
-            background-image: url(${secondImg});
+            background-image: url(${tech});
             background-size: cover;
             background-repeat: no-repeat;
             background-position-y: center;
-            background-position-x: 400px;
             width: 100%;
             height: 100%;
             display: flex;
 
             .textInside {
-                background-color: rgb(193, 208, 222);
-                width: 50%;
+                background-color: rgba(0, 0, 0, 0.1);
+                width: 100%;
                 font-size: 50px;
                 text-align: center;
                 display: flex;
                 align-items: center;
                 justify-content: center;
+
+                p {
+                    color: #FFF;
+                    width: 70%;
+                    letter-spacing: 2.5px;
+                    font-size: 30px;
+                    text-align: center;
+                    font-weight: 600;
+                }
             }
         }
 
         .c {
-            background-color: #0a7397;
+            background-image: url(${secondImg});
             width: 100%;
             height: 100%;
         }

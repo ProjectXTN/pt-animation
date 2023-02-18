@@ -1,10 +1,11 @@
 import React from 'react';
 import { motion, useTransform, useViewportScroll } from 'framer-motion';
+import Typewriter from 'typewriter-effect';
+
+import { Sticky } from '../../styles';
 
 
-import { Sticky } from '../../styles'
-
-import image from '../../image/img-paralax-new.png'
+import image from '../../image/img-paralax-new.png';
 
 
 const FirstAndSecond: React.FC = () => {
@@ -68,21 +69,28 @@ const FirstAndSecond: React.FC = () => {
       ['0%', '-100%', '-100%', '-200%']
     )
 
+
     return  <Sticky className='first'
       style={{
         scale: firstScale,
         borderRadius: firstRadius
       }}
     >
+
+      
     <motion.div className='offset' style={{
       y: offSetY
 
     }}>
-      
-        <div className='firstText'
-        >
-         <h1>Pedro MEIRELES</h1>
-         <p>Développeur FullStack</p>
+        <div className='firstText'>
+         <div className='typeText'>
+         <Typewriter 
+              onInit={(typewriter) => {
+                typewriter.typeString(`<h1> Hello World ! </h1> <br /> <h3>My name is Pedro Meireles, <br /> I'm a developer web based in Paris, FR. I have developed many types of front-ends from web sites and aplications . </h3><br /> `)
+                .start();
+              }}
+              />
+         </div>
         </div>
 
         <div className='a'>
@@ -105,7 +113,14 @@ const FirstAndSecond: React.FC = () => {
           </div>
         <div className='b'>
           <div className='textInside'>
-              <h2>Hello Pedro !!!!</h2>
+              <p>I USE MY PASSION AND SKILLS
+                <br />
+                TO CREATE DIGITAL PRODUCTS AND
+                EXPERIENCES. NATIONAL AND INTERNATIONAL
+                CUSTOMERS RELY ON ME FOR DESIGN,
+                IMPLEMENTATION, AND MANAGEMENT OF
+                THEIR DIGITAL PRODUCTS. AS AN
+                INDEPENDENT.</p>
           </div>
         </div>
         <div className='c'></div>
