@@ -64,6 +64,7 @@ export const Main = styled.main`
                 width: 100%;
                 height: 100%;
                 background-repeat: no-repeat;
+                border-radius: 50px;
             }
         }
 
@@ -73,7 +74,7 @@ export const Main = styled.main`
             background-repeat: no-repeat;
             background-position-y: center;
             width: 100%;
-            height: 100%;
+            height: 108%;
             display: flex;
 
             .textInside {
@@ -97,9 +98,27 @@ export const Main = styled.main`
         }
 
         .c {
-            background-image: url(${secondImg});
             width: 100%;
             height: 100%;
+            display: flex;
+            text-align: center;
+            align-items: center;
+
+            .textMovie {
+                
+                h2 {
+                width: 70%;
+                right: 15%;
+                position: absolute;
+                color: #FFF;
+                z-index: 10;
+            }
+            }
+
+            video {
+                width: 100%;
+                height: auto;
+            }
         }
     }
 

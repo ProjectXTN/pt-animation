@@ -3,6 +3,7 @@ import { motion, useTransform, useViewportScroll } from 'framer-motion';
 import Typewriter from 'typewriter-effect';
 
 import { Sticky } from '../../styles';
+import MeuVideo from '../../image/network.mp4';
 
 
 import image from '../../image/img-paralax-new.png';
@@ -123,7 +124,23 @@ const FirstAndSecond: React.FC = () => {
                 INDEPENDENT.</p>
           </div>
         </div>
-        <div className='c'></div>
+        <div className='c'>
+          <div className='textMovie'>
+            <h2>
+                I USE MY PASSION AND SKILLS
+                <br />O CREATE DIGITAL PRODUCTS AND
+                EXPERIENCES. NATIONAL AND INTERNATIONAL
+                CUSTOMERS RELY ON ME FOR DESIGN,
+                IMPLEMENTATION, AND MANAGEMENT OF
+                THEIR DIGITAL PRODUCTS. AS AN
+                INDEPENDENT.</h2>
+          </div>
+          <div className='movie'>
+            <video  autoPlay loop >
+              <source src={MeuVideo} type="video/mp4" />
+            </video>
+          </div>
+        </div>
     </motion.div>
     </Sticky>
   }
