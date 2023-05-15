@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { motion, useTransform, useViewportScroll } from 'framer-motion';
 import Typewriter from 'typewriter-effect';
 
@@ -70,6 +70,13 @@ const FirstAndSecond: React.FC = () => {
       ['0%', '-100%', '-100%', '-200%']
     )
 
+    const videoRef = useRef<HTMLVideoElement>(null);
+
+    useEffect(() => {
+      if (videoRef.current) {
+        videoRef.current.play();
+      }
+    }, []);
 
     return  <Sticky className='first'
       style={{
@@ -136,7 +143,7 @@ const FirstAndSecond: React.FC = () => {
                 INDEPENDENT.</h2>
           </div>
           <div className='movie'>
-            <video  autoPlay loop >
+            <video ref={videoRef} autoPlay loop muted>
               <source src={MeuVideo} type="video/mp4" />
             </video>
           </div>
